@@ -9,9 +9,11 @@ Fecha : 09 / 04 / 2024
 #include <stdlib.h>
 
 //Estrucutras
-typdef struct{
+typedef struct{
     char * nombre;
 }t_jugador;
+
+
 //Cabecera de funciones
 
 int main(int argc, char *argv[]){
