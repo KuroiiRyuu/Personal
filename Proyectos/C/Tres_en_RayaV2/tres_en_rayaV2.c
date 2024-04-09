@@ -21,7 +21,7 @@ typedef struct{
 
 //Cabecera de funciones
 t_menu menu();
-
+void crearPartida();
 int main(int argc, char *argv[]){
     //Inicializacion de variables
     t_menu opcion = 0;
@@ -32,6 +32,9 @@ int main(int argc, char *argv[]){
         switch(opcion){
             case crear_partida:
                 printf("Creando Partida...\n");
+                crearPartida();
+                //Elegir el modo de juego
+                //Inicializar el array
                 break;
             
             case continuar_partida:
@@ -58,4 +61,10 @@ t_menu menu(){
     printf("------------------------------\n---> ");
     scanf("%d", &opcion);
     return opcion;
+}
+
+void crearPartida(){
+    //Inicializar el array
+
+    //Elegir el modo de juego J1 vs J2 // J1 vs CPU
 }
