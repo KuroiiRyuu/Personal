@@ -49,6 +49,7 @@ t_menu menu(int tareas_total, int tareas_completadas);
 void agregar_tarea(t_todo * toDo);
 t_tarea agregar_especificaciones_tarea();
 char * leerLinea();
+void mostrar_tareas(t_todo * toDo);
 
 
 int main(int argc, char ** argv){
@@ -67,6 +68,7 @@ int main(int argc, char ** argv){
         switch(opcion){
             case VER_TAREA:
                 printf("Ver las tareas\n");
+                mostrar_tareas(&toDo);
                 break;
             case AGREGAR_TAREA:
                 printf("Agregar Tarea\n");
@@ -118,11 +120,11 @@ t_tarea agregar_especificaciones_tarea(){
     tarea.id_tarea = 0;
     printf("Describe el titulo de la tarea : ");
     tarea.Titulo = leerLinea();
-    printf("Introducde la fecha (DD/MM/AAAA/) : ");
+    printf("Introducde la fecha (DD/MM/AAAA) : ");
     aux = leerLinea();
     tarea.Fecha.dia = strtol(strtok(aux, "/"), NULL, 10);
     tarea.Fecha.mes = strtol((aux = strtok(NULL, "/")), NULL, 10);
-    tarea.Fecha.año = strtol(strstr(aux, "/"), NULL, 10);
+    tarea.Fecha.año = strtol(strstr(aux, ""), NULL, 10);
     printf("Quieres añadir una descripcion a la tarea? S/N\n----> ");
     scanf("%c", &opcion);
     while(getchar() != '\n');
@@ -146,4 +148,17 @@ char * leerLinea(){
     }
     frase[numLetra] = '\0';
     return frase;
+}
+
+void mostrar_tareas(t_todo * toDo){
+    
+    if (toDo->numTareas == 0) printf("No hay tareas\n");
+    else{
+        for (int i = 0; i < toDo->numTareas; i++){
+            printf("----------TAREA %d----------\n", i + 1);
+            printf("Nombre : %s\n", toDo->tareas[i].Titulo);
+            if(toDo->tareas[i].contenido != NULL) printf("Contenido adicional : %s\n", toDo->tareas[i].contenido );
+            printf("Fecha : %d/%d/%d\n", toDo->tareas[i].Fecha.dia, toDo->tareas[i].Fecha.mes, toDo->tareas[i].Fecha.año);
+        }
+    }
 }
