@@ -19,6 +19,7 @@ Menu del programa ->
 //Directivas de preprocesamiento
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 //Estructuras
 typedef enum{
@@ -32,9 +33,9 @@ typedef struct{
 
 typedef struct{
     int id_tarea;
-    char Titulo;
+    char * Titulo;
     t_fecha Fecha;
-    char contenido;
+    char * contenido;
 }t_tarea;
 
 typedef struct{
@@ -45,12 +46,19 @@ typedef struct{
 
 //Cabecera de funciones
 t_menu menu(int tareas_total, int tareas_completadas);
+void agregar_tarea(t_todo * toDo);
+t_tarea agregar_especificaciones_tarea();
+char * leerLinea();
+
 
 int main(int argc, char ** argv){
     //Inicializacion de variables
     t_todo toDo;
     toDo.numTareas = 0;
     toDo.tareasCompletadas = 0;
+    
+    //Memoria
+    toDo.tareas = malloc(sizeof(t_tarea));
 
     int opcion = 0;
     //Menu
@@ -62,6 +70,7 @@ int main(int argc, char ** argv){
                 break;
             case AGREGAR_TAREA:
                 printf("Agregar Tarea\n");
+                agregar_tarea(&toDo);
                 break;
             case COMPLETAR_TAREA:
                 printf("Completar Tarea\n");
@@ -90,4 +99,51 @@ t_menu menu(int tareas_total, int tareas_completadas){
     scanf("%d", &opcion);
     while(getchar() != '\n');
     return opcion;
+}
+
+void agregar_tarea(t_todo * toDo){
+    toDo->numTareas++;
+    toDo->tareas = realloc(toDo->tareas, sizeof(t_tarea)* toDo->numTareas);
+    toDo->tareas[toDo->numTareas - 1] = agregar_especificaciones_tarea();
+    toDo->tareas[toDo->numTareas - 1].id_tarea = toDo->numTareas;
+}
+
+t_tarea agregar_especificaciones_tarea(){
+    //Inicializacion de variables
+    t_tarea tarea;
+    char * aux = NULL;
+    char opcion = 0;
+
+    //Agregar items
+    tarea.id_tarea = 0;
+    printf("Describe el titulo de la tarea : ");
+    tarea.Titulo = leerLinea();
+    printf("Introducde la fecha (DD/MM/AAAA/) : ");
+    aux = leerLinea();
+    tarea.Fecha.dia = strtol(strtok(aux, "/"), NULL, 10);
+    tarea.Fecha.mes = strtol((aux = strtok(NULL, "/")), NULL, 10);
+    tarea.Fecha.año = strtol(strstr(aux, "/"), NULL, 10);
+    printf("Quieres añadir una descripcion a la tarea? S/N\n----> ");
+    scanf("%c", &opcion);
+    while(getchar() != '\n');
+    if (opcion == 'S'){
+        tarea.contenido = leerLinea();
+    }else{
+        tarea.contenido = NULL;
+    }
+    free(aux);
+}
+
+char * leerLinea(){
+    int numLetra = 0;
+    char letra = 0;
+    char * frase = NULL;
+
+    while((letra = getchar()) != '\n'){
+        numLetra++;
+        frase = realloc(frase, sizeof(char) * numLetra);
+        frase[numLetra - 1] = letra;
+    }
+    frase[numLetra] = '\0';
+    return frase;
 }
