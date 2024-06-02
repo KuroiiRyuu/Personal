@@ -4,68 +4,60 @@ Autor : Pedro Pérez Montero
 Fecha : 01 / 06 / 2024
 */
 
-/*
-Menu del programa ->
-    Tareas por hacer = &
-    Tareas completadas = &
-    1 Ver las tareas
-    2 Agreagr tarea
-    3 Completar tarea
-    4 Eliminar Tarea
-    5 Salir
-*/
-
-
 //Directivas de preprocesamiento
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
 //Estructuras
-typedef enum{
+typedef enum {
     VER_TAREA = 1, AGREGAR_TAREA, COMPLETAR_TAREA, ELIMINAR_TAREA, SALIR 
-}t_menu;
-typedef struct{
+} t_menu;
+
+typedef struct {
     int dia;
     int mes;
     int año;
-}t_fecha;
+} t_fecha;
 
-typedef struct{
+typedef struct {
     int id_tarea;
-    char * Titulo;
+    char *Titulo;
     t_fecha Fecha;
-    char * contenido;
-}t_tarea;
+    char *contenido;
+    int completada;
+} t_tarea;
 
-typedef struct{
+typedef struct {
     int numTareas;
     int tareasCompletadas;
-    t_tarea * tareas;
-}t_todo;
+    t_tarea *tareas;
+} t_todo;
 
 //Cabecera de funciones
 t_menu menu(int tareas_total, int tareas_completadas);
-void agregar_tarea(t_todo * toDo);
+void agregar_tarea(t_todo *toDo);
 t_tarea agregar_especificaciones_tarea();
-char * leerLinea();
-void mostrar_tareas(t_todo * toDo);
+char *leerLinea();
+void mostrar_tareas(t_todo *toDo);
+void completar_tarea(t_todo *toDo);
+void eliminar_tarea(t_todo *toDo);
+void liberar_memoria(t_todo *toDo);
 
-
-int main(int argc, char ** argv){
-    //Inicializacion de variables
+int main(int argc, char **argv) {
+    // Inicializacion de variables
     t_todo toDo;
     toDo.numTareas = 0;
     toDo.tareasCompletadas = 0;
     
-    //Memoria
-    toDo.tareas = malloc(sizeof(t_tarea));
+    // Memoria
+    toDo.tareas = malloc(sizeof(t_tarea) * 1);
 
     int opcion = 0;
-    //Menu
-    do{
+    // Menu
+    do {
         opcion = menu(toDo.numTareas, toDo.tareasCompletadas);
-        switch(opcion){
+        switch (opcion) {
             case VER_TAREA:
                 printf("Ver las tareas\n");
                 mostrar_tareas(&toDo);
@@ -76,89 +68,140 @@ int main(int argc, char ** argv){
                 break;
             case COMPLETAR_TAREA:
                 printf("Completar Tarea\n");
+                completar_tarea(&toDo);
                 break;
             case ELIMINAR_TAREA:
                 printf("Eliminar Tarea\n");
+                eliminar_tarea(&toDo);
                 break;
             case SALIR:
                 printf("Saliendo del programa...\n");
+                liberar_memoria(&toDo);
                 break;
         }
-    }while(opcion != 5);
-    return 1;
+    } while (opcion != SALIR);
+    return 0;
 }
 
-t_menu menu(int tareas_total, int tareas_completadas){
-    t_menu opcion;
+t_menu menu(int tareas_total, int tareas_completadas) {
+    int opcion;
+    printf("\nTo Do\n");
+    printf("Tareas por hacer : %d\n", tareas_total - tareas_completadas);
+    printf("Tareas completadas : %d\n", tareas_completadas);
+    printf("------------------------\n");
     printf("Menu del programa : \n");
-    printf("\tTareas por hacer : %d\n", tareas_total - tareas_completadas);
-    printf("\tTareas completadas : %d\n", tareas_completadas);
     printf("\t%d. Ver las Tareas\n", VER_TAREA);
     printf("\t%d. Agregar Tarea\n", AGREGAR_TAREA);
     printf("\t%d. Completar Tarea\n", COMPLETAR_TAREA);
     printf("\t%d. Eliminar Tarea\n", ELIMINAR_TAREA);
-    printf("\t%d. Salir\n--->", SALIR);
+    printf("\t%d. Salir\n---> ", SALIR);
     scanf("%d", &opcion);
-    while(getchar() != '\n');
-    return opcion;
+    while (getchar() != '\n');
+    return (t_menu) opcion;
 }
 
-void agregar_tarea(t_todo * toDo){
+void agregar_tarea(t_todo *toDo) {
     toDo->numTareas++;
-    toDo->tareas = realloc(toDo->tareas, sizeof(t_tarea)* toDo->numTareas);
+    toDo->tareas = realloc(toDo->tareas, sizeof(t_tarea) * toDo->numTareas);
     toDo->tareas[toDo->numTareas - 1] = agregar_especificaciones_tarea();
     toDo->tareas[toDo->numTareas - 1].id_tarea = toDo->numTareas;
+    toDo->tareas[toDo->numTareas - 1].completada = 0;
 }
 
-t_tarea agregar_especificaciones_tarea(){
-    //Inicializacion de variables
+t_tarea agregar_especificaciones_tarea() {
     t_tarea tarea;
-    char * aux = NULL;
-    char opcion = 0;
+    char *aux = NULL;
+    char opcion;
 
-    //Agregar items
-    tarea.id_tarea = 0;
-    printf("Describe el titulo de la tarea : ");
+    printf("Describe el titulo de la tarea: ");
     tarea.Titulo = leerLinea();
-    printf("Introducde la fecha (DD/MM/AAAA) : ");
+    printf("Introduce la fecha (DD/MM/AAAA): ");
     aux = leerLinea();
-    tarea.Fecha.dia = strtol(strtok(aux, "/"), NULL, 10);
-    tarea.Fecha.mes = strtol((aux = strtok(NULL, "/")), NULL, 10);
-    tarea.Fecha.año = strtol(strstr(aux, ""), NULL, 10);
+    sscanf(aux, "%d/%d/%d", &tarea.Fecha.dia, &tarea.Fecha.mes, &tarea.Fecha.año);
+    free(aux);
     printf("Quieres añadir una descripcion a la tarea? S/N\n----> ");
-    scanf("%c", &opcion);
-    while(getchar() != '\n');
-    if (opcion == 'S'){
+    scanf(" %c", &opcion);
+    while (getchar() != '\n');
+    if (opcion == 'S' || opcion == 's') {
+        printf("Introduce la descripcion: ");
         tarea.contenido = leerLinea();
-    }else{
+    } else {
         tarea.contenido = NULL;
     }
-    free(aux);
+    return tarea;
 }
 
-char * leerLinea(){
-    int numLetra = 0;
-    char letra = 0;
-    char * frase = NULL;
-
-    while((letra = getchar()) != '\n'){
-        numLetra++;
-        frase = realloc(frase, sizeof(char) * numLetra);
-        frase[numLetra - 1] = letra;
+char *leerLinea() {
+    char *linea = NULL;
+    int c, len = 0;
+    while ((c = getchar()) != '\n' && c != EOF) {
+        linea = realloc(linea, len + 2);
+        linea[len++] = c;
     }
-    frase[numLetra] = '\0';
-    return frase;
+    if (linea) {
+        linea[len] = '\0';
+    }
+    return linea;
 }
 
-void mostrar_tareas(t_todo * toDo){
-    
-    if (toDo->numTareas == 0) printf("No hay tareas\n");
-    else{
-        for (int i = 0; i < toDo->numTareas; i++){
-            printf("----------TAREA %d----------\n", i + 1);
-            printf("Nombre : %s\n", toDo->tareas[i].Titulo);
-            if(toDo->tareas[i].contenido != NULL) printf("Contenido adicional : %s\n", toDo->tareas[i].contenido );
-            printf("Fecha : %d/%d/%d\n", toDo->tareas[i].Fecha.dia, toDo->tareas[i].Fecha.mes, toDo->tareas[i].Fecha.año);
+void mostrar_tareas(t_todo *toDo) {
+    if (toDo->numTareas == 0) {
+        printf("\nNo hay tareas\n");
+    } else {
+        for (int i = 0; i < toDo->numTareas; i++) {
+            printf("---------- TAREA %d ----------\n", i + 1);
+            printf("Nombre: %s\n", toDo->tareas[i].Titulo);
+            if (toDo->tareas[i].contenido) {
+                printf("Contenido adicional: %s\n", toDo->tareas[i].contenido);
+            }
+            printf("Fecha: %d/%d/%d\n", toDo->tareas[i].Fecha.dia, toDo->tareas[i].Fecha.mes, toDo->tareas[i].Fecha.año);
+            printf("Estado: %s\n", toDo->tareas[i].completada ? "Completada" : "Pendiente");
         }
     }
+    printf("------------------------------\n\n");
+}
+
+void completar_tarea(t_todo *toDo) {
+    int id;
+    printf("Introduce el ID de la tarea a completar: ");
+    scanf("%d", &id);
+    while (getchar() != '\n');
+    if (id > 0 && id <= toDo->numTareas && !toDo->tareas[id - 1].completada) {
+        toDo->tareas[id - 1].completada = 1;
+        toDo->tareasCompletadas++;
+        printf("Tarea %d completada.\n", id);
+    } else {
+        printf("ID de tarea no valido o tarea ya completada.\n");
+    }
+}
+
+void eliminar_tarea(t_todo *toDo) {
+    int id;
+    printf("Introduce el ID de la tarea a eliminar: ");
+    scanf("%d", &id);
+    while (getchar() != '\n');
+    if (id > 0 && id <= toDo->numTareas) {
+        free(toDo->tareas[id - 1].Titulo);
+        if (toDo->tareas[id - 1].contenido) {
+            free(toDo->tareas[id - 1].contenido);
+        }
+        for (int i = id - 1; i < toDo->numTareas - 1; i++) {
+            toDo->tareas[i] = toDo->tareas[i + 1];
+        }
+        toDo->numTareas--;
+        toDo->tareas = realloc(toDo->tareas, sizeof(t_tarea) * toDo->numTareas);
+        printf("Tarea %d eliminada.\n", id);
+    } else {
+        printf("ID de tarea no valido.\n");
+    }
+}
+
+void liberar_memoria(t_todo *toDo) {
+    for (int i = 0; i < toDo->numTareas; i++) {
+        free(toDo->tareas[i].Titulo);
+        if (toDo->tareas[i].contenido) {
+            free(toDo->tareas[i].contenido);
+        }
+    }
+    free(toDo->tareas);
 }
