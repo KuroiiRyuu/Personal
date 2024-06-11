@@ -1,0 +1,128 @@
+<mxfile host="app.diagrams.net" modified="2024-06-11T06:03:00.907Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.0" etag="sN3OYPh2xfT5AWUc4rxG" version="24.4.4" type="device">
+  <diagram name="Página-1" id="D0oYin0c-w7JnVz_AcRI">
+    <mxGraphModel dx="1221" dy="626" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Fewk0OgsgSrSCSvbA7M3-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Fewk0OgsgSrSCSvbA7M3-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="430" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Fewk0OgsgSrSCSvbA7M3-1" value="Inicio del Programa" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Fewk0OgsgSrSCSvbA7M3-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Fewk0OgsgSrSCSvbA7M3-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="590" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Fewk0OgsgSrSCSvbA7M3-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Fewk0OgsgSrSCSvbA7M3-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="270" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Fewk0OgsgSrSCSvbA7M3-4" value="&lt;div&gt;Dos Opciones&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="380" y="160" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Fewk0OgsgSrSCSvbA7M3-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Fewk0OgsgSrSCSvbA7M3-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="210" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Fewk0OgsgSrSCSvbA7M3-7" value="Cargar Archivo" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Fewk0OgsgSrSCSvbA7M3-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Fewk0OgsgSrSCSvbA7M3-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="650" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Fewk0OgsgSrSCSvbA7M3-8" value="&lt;div&gt;Crear Archivo&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Fewk0OgsgSrSCSvbA7M3-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Fewk0OgsgSrSCSvbA7M3-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="440" y="680" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Fewk0OgsgSrSCSvbA7M3-10" value="Abrir y cargar toda la información en la aplicación " style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Fewk0OgsgSrSCSvbA7M3-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Fewk0OgsgSrSCSvbA7M3-12">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="650" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Fewk0OgsgSrSCSvbA7M3-12" value="&lt;div&gt;Definir los espacios&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Fewk0OgsgSrSCSvbA7M3-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Fewk0OgsgSrSCSvbA7M3-15">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="650" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Fewk0OgsgSrSCSvbA7M3-15" value="Definir stock" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Fewk0OgsgSrSCSvbA7M3-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Fewk0OgsgSrSCSvbA7M3-17">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="440" y="680" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Fewk0OgsgSrSCSvbA7M3-17" value="Definir camiones" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="520" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Fewk0OgsgSrSCSvbA7M3-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Fewk0OgsgSrSCSvbA7M3-21">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="250" y="735" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Fewk0OgsgSrSCSvbA7M3-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Fewk0OgsgSrSCSvbA7M3-21">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="330" y="840" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Fewk0OgsgSrSCSvbA7M3-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Fewk0OgsgSrSCSvbA7M3-21">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="620" y="735" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Fewk0OgsgSrSCSvbA7M3-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="Fewk0OgsgSrSCSvbA7M3-21">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="730" y="840" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Fewk0OgsgSrSCSvbA7M3-21" value="5 Opciones de programa" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="680" width="230" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="Fewk0OgsgSrSCSvbA7M3-25" value="Mostrar Carga de los camiones que se estan cargados" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="840" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Fewk0OgsgSrSCSvbA7M3-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.625;entryY=-0.017;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Fewk0OgsgSrSCSvbA7M3-21">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="545" y="838.98" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Fewk0OgsgSrSCSvbA7M3-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="Fewk0OgsgSrSCSvbA7M3-27" target="Fewk0OgsgSrSCSvbA7M3-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Fewk0OgsgSrSCSvbA7M3-27" value="Definir que tiene que cargar un camion" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="705" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Fewk0OgsgSrSCSvbA7M3-28" value="Mostrar Stock de los espacios" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="840" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Fewk0OgsgSrSCSvbA7M3-30" value="Cargar un producto en un camion" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="705" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Fewk0OgsgSrSCSvbA7M3-31" value="Cuando un camion se carga se eliminan todos los productos y se añade una fecha" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="60" y="490" width="145" height="145" as="geometry" />
+        </mxCell>
+        <mxCell id="Fewk0OgsgSrSCSvbA7M3-36" value="Historia de camiones Cargados en el tiempo" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="670" y="840" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
