@@ -1,0 +1,32 @@
+Ejercicio: Rastreador de Tareas
+Descripción del Ejercicio
+
+Crea una aplicación web que permita a los usuarios agregar, eliminar y marcar tareas como completadas en una lista.
+La aplicación debe tener una interfaz simple y permitir la interacción con la lista de tareas mediante JavaScript.
+La lista debe conservar las tareas incluso después de refrescar la página usando el almacenamiento local del navegador 
+(localStorage).
+
+Requisitos del Ejercicio
+
+    Estructura HTML:
+        - Un campo de texto para ingresar una nueva tarea.
+        - Un botón para agregar la tarea a la lista.
+        - Una lista desordenada (<ul>) para mostrar las tareas.
+        - Cada tarea debe tener un checkbox para marcarla como completada y un botón para eliminarla.
+
+    Estilos CSS:
+        - La lista de tareas debe tener un diseño limpio y ordenado.
+        - Las tareas completadas deben tener un estilo diferente (por ejemplo, texto tachado o color de fondo distinto).
+        - Agrega algunos estilos para los botones y el campo de texto.
+
+    Funcionalidad JavaScript:
+        - Agregar tareas a la lista.
+        - Marcar tareas como completadas (modificando el estilo de la tarea).
+        - Eliminar tareas de la lista.
+        - Guardar y recuperar las tareas desde el localStorage para que se mantengan después de recargar la página.
+
+Nombre del Ejercicio: "Rastreador de Tareas"
+Este ejercicio te permitirá practicar : 
+    - la creación de una interfaz interactiva
+    - el manejo de eventos en JavaScript
+    - el uso del localStorage para la persistencia de datos.

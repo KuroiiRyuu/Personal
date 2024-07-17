@@ -1,0 +1,65 @@
+body {
+    background-color: black;
+}
+
+header{
+    margin: 10px;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+#contenedor-formualario{
+    margin: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: aliceblue;
+}
+
+#texto {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#nombre-tarea, #agregar-tarea {
+    padding: 10px;
+    width: 20%;
+    margin: 9px 0;
+}
+
+ul {
+    margin: 0px;
+    border-radius: 20px;
+    background-color: aliceblue;
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+li {
+    list-style-type: none;
+    padding: 20px;
+    display: flex; /* Activa el modo flexbox en el contenedor */
+    justify-content: space-between; /* Alineación horizontal de los elementos (centrado) */ /* Alineación vertical de los elementos (centrado) */
+    flex-direction: row; /* Dirección de los elementos (fila) */ /* Envolver elementos si no caben en una sola línea */
+    width: 30.85%;
+}
+
+#boton-elimiar {
+    padding: 10px;
+    background-color: red;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);    
+}
+
+.completed {
+    color: green;
+    font-weight: bold;
+    text-decoration: line-through;
+}
+
+
