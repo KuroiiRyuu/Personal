@@ -31,8 +31,6 @@ header{
 
 ul {
     margin: 0px;
-    border-radius: 20px;
-    background-color: aliceblue;
     padding: 0px;
     display: flex;
     flex-direction: row;
@@ -42,17 +40,20 @@ ul {
 
 li {
     list-style-type: none;
-    padding: 20px;
+    background-color: aliceblue;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px;
     display: flex; /* Activa el modo flexbox en el contenedor */
     justify-content: space-between; /* Alineación horizontal de los elementos (centrado) */ /* Alineación vertical de los elementos (centrado) */
     flex-direction: row; /* Dirección de los elementos (fila) */ /* Envolver elementos si no caben en una sola línea */
-    width: 30.85%;
+    width: 27%;
 }
 
 #boton-elimiar {
-    padding: 10px;
+    padding: 5px;
     background-color: red;
-    border-radius: 20px;
+    border-radius: 3px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);    
 }
 
