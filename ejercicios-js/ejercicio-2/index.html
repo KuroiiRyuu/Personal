@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Unidades</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Conversor de Unidades</h1>
+    </header>
+    <main>
+        <div id="categoria">
+            <form>
+                <!-- TODO : Agregar icono que cambia segun la opcion-->
+                <select name="categoria" id="seleccion-categoria">
+                    <option value="longitud">Longitud</option>
+                    <option value="masa">Masa</option>
+                    <option value="presion">Presion</option>
+                    <option value="energia">Energia</option>
+                    <option value="tiempo">Tiempo</option>
+                    <option value="temperatura">Temperatura</option>
+                </select>
+            </form>
+        </div>
+        <div id="contenedor-conversiones">
+            <form>
+                <select name="unidades-izquierda" id="unidades-izquierda" class="selector"></select>
+                <input type="text" name="izquierda" id="izquierda">
+            </form>
+            <span>=></span>
+            <form>
+                <select name="unidades-derecha" id="unidades-derecha" class="selector"></select>
+                <input type="text" name="derecha" id="derecha">
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>De kur0h3i Por kur0h3i</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

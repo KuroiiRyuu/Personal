@@ -1,4 +1,5 @@
-document.addEventListener('DOMContentLoaded', function() {
+//Cada vez que el dom se actualiza
+document.addEventListener('DOMContentLoaded', () => {
     // Variables para los elementos del DOM
     const taskInput = document.getElementById('nombre-tarea');
     const addTaskBtn = document.getElementById('agregar-tarea');
@@ -28,13 +29,13 @@ document.addEventListener('DOMContentLoaded', function() {
             removeBtn.id = 'boton-elimiar'
             
             // Agregar eventos para marcar como completada y eliminar la tarea
-            checkbox.addEventListener('change', function() {
+            checkbox.addEventListener('change', () => {
                 tasks[index].completed = checkbox.checked;
                 saveTasks();
                 renderTasks();
             });
 
-            removeBtn.addEventListener('click', function() {
+            removeBtn.addEventListener('click', () => {
                 tasks.splice(index, 1);
                 saveTasks();
                 renderTasks();
@@ -59,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Evento de click en el botón "Agregar Tarea"
-    addTaskBtn.addEventListener('click', function() {
+    addTaskBtn.addEventListener('click', () => {
         const taskText = taskInput.value.trim();
         if (taskText) {
             tasks.push({ text: taskText, completed: false });

@@ -1,0 +1,50 @@
+header {
+    background-color: aquamarine;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    margin: 10px;
+    background-color: aquamarine;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#categoria select {
+    margin: 10px;
+    padding: 5px;
+    font-size: 1.2em;  
+    text-align: center;
+    border-radius: 20px;
+    }
+
+#contenedor-conversiones {
+    display: flex;
+    flex-direction:row;
+
+}
+
+#contenedor-conversiones form, span{
+    margin: 20px;
+    
+}
+
+#contenedor-conversiones {
+    padding: 10px;
+}
+
+#contenedor-conversiones input {
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
