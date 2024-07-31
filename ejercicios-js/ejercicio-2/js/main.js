@@ -18,7 +18,7 @@ document.getElementById('seleccion-categoria').addEventListener('change', () => 
             //Elimina los campos anteriores
             eliminar_buffer_selectores(selector_izquierda, selector_derecha);
             //Cambiar el Icono
-            icon.src = './../img/icon/icono_temperatura.png';
+            icon.src = './img/icon/icono_temperatura.png';
             icon.alt = 'Icono_Temperatura';
             // Rellenar los campos de opciones
             temperatura.forEach(temperatura => {
@@ -60,7 +60,7 @@ document.getElementById('seleccion-categoria').addEventListener('change', () => 
             //Elimina los campos anteriores
             eliminar_buffer_selectores(selector_izquierda, selector_derecha);
             //Cambiar el Icono
-            icon.src = './../img/icon/icono_tiempo.png';
+            icon.src = './img/icon/icono_tiempo.png';
             icon.alt = 'Icono_Tiempo';
             // Rellenar los campos de opciones
             tiempo.forEach(tiempo => {
@@ -102,7 +102,7 @@ document.getElementById('seleccion-categoria').addEventListener('change', () => 
             //Elimina los campos anteriores
             eliminar_buffer_selectores(selector_izquierda, selector_derecha);
             //Cambiar el Icono
-            icon.src = './../img/icon/icono_energia.png';
+            icon.src = './img/icon/icono_energia.png';
             icon.alt = 'Icono_Energia';
             // Rellenar los campos de opciones
             energia.forEach(energia => {
@@ -145,7 +145,7 @@ document.getElementById('seleccion-categoria').addEventListener('change', () => 
             //Elimina los campos anteriores
             eliminar_buffer_selectores(selector_izquierda, selector_derecha);
             //Cambiar el Icono
-            icon.src = './../img/icon/icono_longitud.png';
+            icon.src = './img/icon/icono_longitud.png';
             icon.alt = 'Icono_Longitud';
             // Rellenar los campos de opciones
             longitud.forEach(longitud => {
@@ -188,7 +188,7 @@ document.getElementById('seleccion-categoria').addEventListener('change', () => 
         //Elimina los campos anteriores
         eliminar_buffer_selectores(selector_izquierda, selector_derecha);
         //Cambiar el Icono
-        icon.src = './../img/icon/icono_presion.png';
+        icon.src = './img/icon/icono_presion.png';
         icon.alt = 'Icono_Presion';
         // Rellenar los campos de opciones
         presion.forEach(presion => {
@@ -229,7 +229,7 @@ document.getElementById('seleccion-categoria').addEventListener('change', () => 
             //Elimina los campos anteriores
             eliminar_buffer_selectores(selector_izquierda, selector_derecha);
             //Cambiar el Icono
-            icon.src = './../img/icon/icono_masa.png';
+            icon.src = './img/icon/icono_masa.png';
             icon.alt = 'Icono_Masa';
             // Rellenar los campos de opciones
             masa.forEach(masa => {
