@@ -1,6 +1,6 @@
 // main.js
 import {energia, longitud, presion, masa, temperatura, tiempo} from './variables.js';
-import {eliminar_buffer_selectores, calcular_temperatura, calcular_tiempo} from './module.js';
+import {eliminar_buffer_selectores, calcular_temperatura, calcular_tiempo, calcular_energia, calcular_longitud} from './module.js';
 
 document.getElementById('seleccion-categoria').addEventListener('change', () => {
     let categoria = document.getElementById('seleccion-categoria').value;
@@ -114,7 +114,19 @@ document.getElementById('seleccion-categoria').addEventListener('change', () => 
                 
                 // Cuando el elemento de la izquierada cambie
             });
-            //TODO: Acabar funcion energia
+            // Cuando el elemento de la izquierada cambie
+            document.getElementById('unidades-izquierda').addEventListener('change', () => {
+                calcular_energia(selector_izquierda, selector_derecha, input_izquierda, input_derecha);
+            });
+            document.getElementById('unidades-derecha').addEventListener('change', () => {
+                calcular_energia(selector_izquierda, selector_derecha, input_izquierda, input_derecha);
+            });
+            document.getElementById('derecha').addEventListener('input', () => {
+                calcular_energia(selector_izquierda, selector_derecha, input_izquierda, input_derecha);
+            });
+            document.getElementById('izquierda').addEventListener('input', () => {
+                calcular_energia(selector_izquierda, selector_derecha, input_izquierda, input_derecha);
+            });
             break;
         
         case 'longitud':
@@ -134,11 +146,27 @@ document.getElementById('seleccion-categoria').addEventListener('change', () => 
                 selector_derecha.appendChild(opcion_derecha);
                 selector_izquierda.appendChild(opcion_izquierda);
                 
-                //TODO:Agregar unos campos por defecto
+                // Agregar unos campos por defecto
+                input_izquierda.value = 1;
+                selector_izquierda.value = 'metro'
+                input_derecha.value = 39.37;
+                selector_derecha.value = 'pulgada'
                 
-                // Cuando el elemento de la izquierada cambie
+                
             });
-            //TODO: Acabar funcion longitud
+            // Cuando el elemento de la izquierada cambie
+            document.getElementById('unidades-izquierda').addEventListener('change', () => {
+                calcular_longitud(selector_izquierda, selector_derecha, input_izquierda, input_derecha);
+            });
+            document.getElementById('unidades-derecha').addEventListener('change', () => {
+                calcular_longitud(selector_izquierda, selector_derecha, input_izquierda, input_derecha);
+            });
+            document.getElementById('derecha').addEventListener('input', () => {
+                calcular_longitud(selector_izquierda, selector_derecha, input_izquierda, input_derecha);
+            });
+            document.getElementById('izquierda').addEventListener('input', () => {
+                calcular_longitud(selector_izquierda, selector_derecha, input_izquierda, input_derecha);
+            });
             break;
         
         case 'presion':
@@ -159,7 +187,7 @@ document.getElementById('seleccion-categoria').addEventListener('change', () => 
             selector_izquierda.appendChild(opcion_izquierda);
             
             //TODO: Agregar unos campos por defecto
-
+            
             
             // Cuando el elemento de la izquierada cambie
         });

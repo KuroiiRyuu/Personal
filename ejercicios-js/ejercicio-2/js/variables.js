@@ -1,6 +1,6 @@
 // variables.js
 
-// Energia
+// Energia DONE
 export const presion = [
     {value: 'pascal', text: 'Pascal'},
     {value: 'atmosfera', text: 'Atmosfera'},
@@ -8,7 +8,7 @@ export const presion = [
 
 ]
 
-// Longitud
+// Longitud DONE
 export const longitud = [
     {value: 'metro', text: 'Metro'},
     {value: 'milla', text: 'Milla'},
@@ -17,7 +17,7 @@ export const longitud = [
     {value: 'pulgada', text: 'Pulgada'},
 ]
 
-// Presion
+// Presion DONE
 export const energia = [
     {value: 'kilojulio', text: 'Kilojulio'},
     {value: 'kilocalorias', text: 'Kilocalorias'},
@@ -33,14 +33,14 @@ export const masa = [
 
 ]
 
-// Temperatura
+// Temperatura DONE
 export const temperatura = [
     {value: 'celsius', text: 'Celsius'},
     {value: 'farhrenheit', text: 'Farhrenheit'},
     {value: 'kelvin', text: 'Kelvin'}
 ]
-// Tiempo
 
+// Tiempo DONE
 export const tiempo = [
     {value: 'segundo', text: 'Segundo'},
     {value: 'minuto', text: 'Minuto'},
