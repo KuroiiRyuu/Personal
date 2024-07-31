@@ -1,4 +1,5 @@
 // main.js
+
 import {energia, longitud, presion, masa, temperatura, tiempo} from './variables.js';
 import {eliminar_buffer_selectores, calcular_temperatura, calcular_tiempo, calcular_energia, calcular_longitud, calcular_presion, calcular_masa} from './module.js';
 
@@ -8,13 +9,17 @@ document.getElementById('seleccion-categoria').addEventListener('change', () => 
     let selector_izquierda = document.getElementById('unidades-izquierda');
     let input_derecha = document.getElementById('derecha');
     let input_izquierda = document.getElementById('izquierda');
+    let icon = document.getElementById('logo-categoria');
+   
     
     //Categoria
-    console.log(categoria);
     switch(categoria){
         case 'temperatura' :
             //Elimina los campos anteriores
             eliminar_buffer_selectores(selector_izquierda, selector_derecha);
+            //Cambiar el Icono
+            icon.src = './../img/icon/icono_temperatura.png';
+            icon.alt = 'Icono_Temperatura';
             // Rellenar los campos de opciones
             temperatura.forEach(temperatura => {
                 // Crear los elementos
@@ -54,6 +59,9 @@ document.getElementById('seleccion-categoria').addEventListener('change', () => 
         case 'tiempo':
             //Elimina los campos anteriores
             eliminar_buffer_selectores(selector_izquierda, selector_derecha);
+            //Cambiar el Icono
+            icon.src = './../img/icon/icono_tiempo.png';
+            icon.alt = 'Icono_Tiempo';
             // Rellenar los campos de opciones
             tiempo.forEach(tiempo => {
                 // Crear los elementos
@@ -93,6 +101,9 @@ document.getElementById('seleccion-categoria').addEventListener('change', () => 
         case 'energia':
             //Elimina los campos anteriores
             eliminar_buffer_selectores(selector_izquierda, selector_derecha);
+            //Cambiar el Icono
+            icon.src = './../img/icon/icono_energia.png';
+            icon.alt = 'Icono_Energia';
             // Rellenar los campos de opciones
             energia.forEach(energia => {
                 // Crear los elementos
@@ -133,6 +144,9 @@ document.getElementById('seleccion-categoria').addEventListener('change', () => 
         case 'longitud':
             //Elimina los campos anteriores
             eliminar_buffer_selectores(selector_izquierda, selector_derecha);
+            //Cambiar el Icono
+            icon.src = './../img/icon/icono_longitud.png';
+            icon.alt = 'Icono_Longitud';
             // Rellenar los campos de opciones
             longitud.forEach(longitud => {
                 // Crear los elementos
@@ -173,6 +187,9 @@ document.getElementById('seleccion-categoria').addEventListener('change', () => 
         case 'presion':
         //Elimina los campos anteriores
         eliminar_buffer_selectores(selector_izquierda, selector_derecha);
+        //Cambiar el Icono
+        icon.src = './../img/icon/icono_presion.png';
+        icon.alt = 'Icono_Presion';
         // Rellenar los campos de opciones
         presion.forEach(presion => {
             // Crear los elementos
@@ -187,7 +204,7 @@ document.getElementById('seleccion-categoria').addEventListener('change', () => 
             selector_derecha.appendChild(opcion_derecha);
             selector_izquierda.appendChild(opcion_izquierda);
             
-            //TODO: Agregar unos campos por defecto
+            // Agregar unos campos por defecto
             selector_izquierda.value = 'atmosfera';
             input_izquierda.value = 35.274;
             selector_derecha.value = 'bar';
@@ -211,6 +228,9 @@ document.getElementById('seleccion-categoria').addEventListener('change', () => 
         case 'masa':
             //Elimina los campos anteriores
             eliminar_buffer_selectores(selector_izquierda, selector_derecha);
+            //Cambiar el Icono
+            icon.src = './../img/icon/icono_masa.png';
+            icon.alt = 'Icono_Masa';
             // Rellenar los campos de opciones
             masa.forEach(masa => {
                 // Crear los elementos
