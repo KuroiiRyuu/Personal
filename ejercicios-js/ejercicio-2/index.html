@@ -9,33 +9,37 @@
 </head>
 <body>
     <header>
-        <h1>Conversor de Unidades</h1>
+        <div id="titulo">
+            <h1>Conversor de Unidades</h1>
+        </div>
     </header>
     <main>
         <script src="js/main.js" type="module" defer async></script>
-        <div id="categoria">
-            <form>
-                <!-- TODO : Agregar icono que cambia segun la opcion-->
-                <select name="categoria" id="seleccion-categoria">
-                    <option value="longitud">Longitud</option>
-                    <option value="masa">Masa</option>
-                    <option value="presion">Presion</option>
-                    <option value="energia">Energia</option>
-                    <option value="tiempo">Tiempo</option>
-                    <option value="temperatura">Temperatura</option>
-                </select>
-            </form>
-        </div>
-        <div id="contenedor-conversiones">
-            <form>
-                <select name="unidades-izquierda" id="unidades-izquierda" class="selector"></select>
-                <input type="text" name="izquierda" id="izquierda">
-            </form>
-            <span>=></span>
-            <form>
-                <select name="unidades-derecha" id="unidades-derecha" class="selector"></select>
-                <input type="text" name="derecha" id="derecha">
-            </form>
+        <div id="conversiones">  
+            <div id="categoria">
+                <form>
+                    <!-- TODO : Agregar icono que cambia segun la opcion-->
+                    <select name="categoria" id="seleccion-categoria">
+                        <option value="longitud">Longitud</option>
+                        <option value="masa">Masa</option>
+                        <option value="presion">Presion</option>
+                        <option value="energia">Energia</option>
+                        <option value="tiempo">Tiempo</option>
+                        <option value="temperatura">Temperatura</option>
+                    </select>
+                </form>
+            </div>
+            <div id="contenedor-conversiones">
+                <form>
+                    <select name="unidades-izquierda" id="unidades-izquierda" class="selector"></select>
+                    <input type="text" name="izquierda" id="izquierda">
+                </form>
+                <img src="./img/flecha.jpg" alt="Flecha">
+                <form>
+                    <select name="unidades-derecha" id="unidades-derecha" class="selector"></select>
+                    <input type="text" name="derecha" id="derecha">
+                </form>
+            </div>   
         </div>
     </main>
     <footer>

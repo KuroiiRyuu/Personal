@@ -379,7 +379,7 @@ export function calcular_presion(selector_izquierda, selector_derecha, input_izq
     }
 }
 
-// Funcion para calcular la presion
+// Funcion para calcular la masa
 export function calcular_masa(selector_izquierda, selector_derecha, input_izquierda, input_derecha){
     switch(selector_izquierda.value){
         case 'kilogramo':

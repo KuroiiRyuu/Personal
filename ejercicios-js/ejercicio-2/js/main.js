@@ -1,6 +1,6 @@
 // main.js
 import {energia, longitud, presion, masa, temperatura, tiempo} from './variables.js';
-import {eliminar_buffer_selectores, calcular_temperatura, calcular_tiempo, calcular_energia, calcular_longitud} from './module.js';
+import {eliminar_buffer_selectores, calcular_temperatura, calcular_tiempo, calcular_energia, calcular_longitud, calcular_presion, calcular_masa} from './module.js';
 
 document.getElementById('seleccion-categoria').addEventListener('change', () => {
     let categoria = document.getElementById('seleccion-categoria').value;
@@ -34,6 +34,7 @@ document.getElementById('seleccion-categoria').addEventListener('change', () => 
                 selector_izquierda.value = 'celsius'
                 input_derecha.value = 32;
                 selector_derecha.value = 'farhrenheit'
+                
             });
             // Cuando el elemento de la izquierada cambie
             document.getElementById('unidades-izquierda').addEventListener('change', () => {
@@ -42,10 +43,10 @@ document.getElementById('seleccion-categoria').addEventListener('change', () => 
             document.getElementById('unidades-derecha').addEventListener('change', () => {
                 calcular_temperatura(selector_izquierda, selector_derecha, input_izquierda, input_derecha);
             });
-            document.getElementById('derecha').addEventListener('input', () => {
+            document.getElementById('derecha').addEventListener('change', () => {
                 calcular_temperatura(selector_izquierda, selector_derecha, input_izquierda, input_derecha);
             });
-            document.getElementById('izquierda').addEventListener('input', () => {
+            document.getElementById('izquierda').addEventListener('change', () => {
                 calcular_temperatura(selector_izquierda, selector_derecha, input_izquierda, input_derecha);
             });
             break;
@@ -81,10 +82,10 @@ document.getElementById('seleccion-categoria').addEventListener('change', () => 
             document.getElementById('unidades-derecha').addEventListener('change', () => {
                 calcular_tiempo(selector_izquierda, selector_derecha, input_izquierda, input_derecha);
             });
-            document.getElementById('derecha').addEventListener('input', () => {
+            document.getElementById('derecha').addEventListener('change', () => {
                 calcular_tiempo(selector_izquierda, selector_derecha, input_izquierda, input_derecha);
             });
-            document.getElementById('izquierda').addEventListener('input', () => {
+            document.getElementById('izquierda').addEventListener('change', () => {
                 calcular_tiempo(selector_izquierda, selector_derecha, input_izquierda, input_derecha);
             });
             break;
@@ -121,10 +122,10 @@ document.getElementById('seleccion-categoria').addEventListener('change', () => 
             document.getElementById('unidades-derecha').addEventListener('change', () => {
                 calcular_energia(selector_izquierda, selector_derecha, input_izquierda, input_derecha);
             });
-            document.getElementById('derecha').addEventListener('input', () => {
+            document.getElementById('derecha').addEventListener('change', () => {
                 calcular_energia(selector_izquierda, selector_derecha, input_izquierda, input_derecha);
             });
-            document.getElementById('izquierda').addEventListener('input', () => {
+            document.getElementById('izquierda').addEventListener('change', () => {
                 calcular_energia(selector_izquierda, selector_derecha, input_izquierda, input_derecha);
             });
             break;
@@ -161,10 +162,10 @@ document.getElementById('seleccion-categoria').addEventListener('change', () => 
             document.getElementById('unidades-derecha').addEventListener('change', () => {
                 calcular_longitud(selector_izquierda, selector_derecha, input_izquierda, input_derecha);
             });
-            document.getElementById('derecha').addEventListener('input', () => {
+            document.getElementById('derecha').addEventListener('change', () => {
                 calcular_longitud(selector_izquierda, selector_derecha, input_izquierda, input_derecha);
             });
-            document.getElementById('izquierda').addEventListener('input', () => {
+            document.getElementById('izquierda').addEventListener('change', () => {
                 calcular_longitud(selector_izquierda, selector_derecha, input_izquierda, input_derecha);
             });
             break;
@@ -187,11 +188,24 @@ document.getElementById('seleccion-categoria').addEventListener('change', () => 
             selector_izquierda.appendChild(opcion_izquierda);
             
             //TODO: Agregar unos campos por defecto
-            
-            
-            // Cuando el elemento de la izquierada cambie
+            selector_izquierda.value = 'atmosfera';
+            input_izquierda.value = 35.274;
+            selector_derecha.value = 'bar';
+            input_derecha.value = 1.0132;
         });
-        //TODO: Acabar funcion longitud
+        // Cuando el elemento de la izquierada cambie
+        document.getElementById('unidades-izquierda').addEventListener('change', () => {
+            calcular_presion(selector_izquierda, selector_derecha, input_izquierda, input_derecha);
+        });
+        document.getElementById('unidades-derecha').addEventListener('change', () => {
+            calcular_presion(selector_izquierda, selector_derecha, input_izquierda, input_derecha);
+        });
+        document.getElementById('derecha').addEventListener('change', () => {
+            calcular_presion(selector_izquierda, selector_derecha, input_izquierda, input_derecha);
+        });
+        document.getElementById('izquierda').addEventListener('change', () => {
+            calcular_presion(selector_izquierda, selector_derecha, input_izquierda, input_derecha);
+        });
         break;
 
         case 'masa':
@@ -211,12 +225,25 @@ document.getElementById('seleccion-categoria').addEventListener('change', () => 
                 selector_derecha.appendChild(opcion_derecha);
                 selector_izquierda.appendChild(opcion_izquierda);
                 
-                //TODO: Agregar unos campos por defecto
-
-                
-                // Cuando el elemento de la izquierada cambie
+                // Agregar unos campos por defecto
+                selector_izquierda.value = 'kilogramo';
+                input_izquierda.value = 1;
+                selector_derecha.value = 'libra';
+                input_derecha.value =  2.205;
             });
-            //TODO: Acabar funcion longitud
+            // Cuando el elemento de la izquierada cambie
+            document.getElementById('unidades-izquierda').addEventListener('change', () => {
+                calcular_masa(selector_izquierda, selector_derecha, input_izquierda, input_derecha);
+            });
+            document.getElementById('unidades-derecha').addEventListener('change', () => {
+                calcular_masa(selector_izquierda, selector_derecha, input_izquierda, input_derecha);
+            });
+            document.getElementById('derecha').addEventListener('change', () => {
+                calcular_masa(selector_izquierda, selector_derecha, input_izquierda, input_derecha);
+            });
+            document.getElementById('izquierda').addEventListener('change', () => {
+                calcular_masa(selector_izquierda, selector_derecha, input_izquierda, input_derecha);
+            });
             break;
     }
 });
