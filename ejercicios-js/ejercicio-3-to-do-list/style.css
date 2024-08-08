@@ -60,3 +60,15 @@ main form #add_task:hover {
     border: solid black 2px;
     transition: 0.4s;
 }
+
+li{
+    list-style:none;
+    display: flex;
+    justify-content: space-between;
+    padding: 1vw;
+    margin-bottom: 2vh;
+    background-color: grey;
+    width: 24vw;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
