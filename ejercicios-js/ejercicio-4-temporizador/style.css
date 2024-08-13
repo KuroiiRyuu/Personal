@@ -1,0 +1,75 @@
+body {
+    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background: antiquewhite;
+    text-align: center;
+    padding: 0.5vw;
+    width: 30vw;
+    border-radius: 20px;
+    box-shadow: 10px 5px 5px #f69d3c ;
+    margin-bottom: 5vh;
+}
+
+main {
+    background: antiquewhite;
+    padding: 0.5vw;
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #f69d3c ;
+}
+
+main #contenedor-hora {
+    display: flex;
+    justify-content: space-around;
+    padding: 1vw;
+}
+
+#mas, #menos{
+    width: 2vw;
+    height: 3vh;
+    background-color: darksalmon;
+    border-color: #f69d3c;
+    border-radius: 100px;
+}
+
+#menos:hover {
+    background-color: indianred;
+    border-color: red;
+    transition: 0.3s;
+}
+
+#mas:hover {
+    background-color: darkseagreen;
+    border-color: green;
+    transition: 0.3s;
+}
+
+main #contenedor-hora p {
+    font-size: 1.4em;
+    margin-top: 0;
+}
+
+main #contenedor-botones {
+    display: flex;
+    justify-content: space-around;
+}
+
+main #contenedor-botones button {
+    width: 9vw;
+    height: 3vh;
+    background-color: darksalmon;
+    border-color: #f69d3c;
+}
+
+main #contenedor-botones button:hover {
+    background-color: aqua;
+    border-color: #3f87a6;
+    transition: 0.5s;
+}

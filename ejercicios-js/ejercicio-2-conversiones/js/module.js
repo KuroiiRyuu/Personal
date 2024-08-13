@@ -200,7 +200,7 @@ export function calcular_energia(selector_izquierda, selector_derecha, input_izq
                     input_derecha.value = +input_izquierda.value
                     break;
                 case 'kilocalorias':
-                    input_derecha.value = (+input_izquierda.value) / 4,184;
+                    input_derecha.value = (+input_izquierda.value) / 4.184;
                     break;
                 case 'kilovatio-hora':
                     input_derecha.value = +input_izquierda.value / 3600;
@@ -210,13 +210,13 @@ export function calcular_energia(selector_izquierda, selector_derecha, input_izq
         case 'kilocalorias':
             switch(selector_derecha.value){
                 case 'kilojulio':
-                    input_derecha.value = +input_izquierda.value * 4,184;
+                    input_derecha.value = +input_izquierda.value * 4.184;
                     break;
                 case 'kilocalorias':
                     input_derecha.value = +input_izquierda.value
                     break;
                 case 'kilovatio-hora':
-                    input_derecha.value = +input_izquierda.value /  860,4;
+                    input_derecha.value = +input_izquierda.value /  860.4;
                     break;
             }
             break;
@@ -226,7 +226,7 @@ export function calcular_energia(selector_izquierda, selector_derecha, input_izq
                     input_derecha.value = +input_izquierda.value * 3600;
                     break;
                 case 'kilocalorias':
-                    input_derecha.value = +input_izquierda.value * 860,4;
+                    input_derecha.value = +input_izquierda.value * 860.4;
                     break;
                 case 'kilovatio-hora':
                     input_derecha.value = +input_izquierda.value

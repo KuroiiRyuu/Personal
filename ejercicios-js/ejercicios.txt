@@ -1,10 +1,10 @@
-Ejercicio 1: Calculadora Basica
+Ejercicio 1: Calculadora Basica (DONE)
 Descripcion: Crea una calculadora basica que permita a los usuarios sumar, restar, multiplicar y dividir dos numeros. La interfaz debe tener dos campos de entrada para los numeros y botones para cada operacion. Muestra el resultado en la pagina cuando se presione un boton.
 
-Ejercicio 2: Conversor de Unidades
+Ejercicio 2: Conversor de Unidades (DONE)
 Descripcion: Disena una pagina que permita convertir entre diferentes unidades de medida (por ejemplo, metros a pies, litros a galones, etc.). La pagina debe tener campos de entrada para el valor y la unidad de origen, asi como un boton para realizar la conversion y mostrar el resultado.
 
-Ejercicio 3: Lista de Tareas
+Ejercicio 3: Lista de Tareas (DONE)
 Descripcion: Crea una lista de tareas donde los usuarios puedan agregar nuevas tareas, marcar tareas como completadas y eliminar tareas. Las tareas deben mostrarse en una lista, y las tareas completadas deben tener un estilo diferente (por ejemplo, tachado).
 
 Ejercicio 4: Temporizador (Timer)

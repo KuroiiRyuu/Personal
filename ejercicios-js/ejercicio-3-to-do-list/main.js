@@ -43,7 +43,7 @@ document.getElementById("add_task").addEventListener('click',() => {
 
         // Delete Button
         let taskDelete = document.createElement('button');
-        taskDelete.innerHTML = '<img src="src/img/eliminar.png" width="15px">';
+        taskDelete.innerHTML = '<img alt="boton-eliminar" src="src/img/eliminar.png" width="15px">';
         taskDelete.id = 'task_delete';
 
         taskDelete.addEventListener('click', () => {
